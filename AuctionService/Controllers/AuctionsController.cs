@@ -66,7 +66,6 @@ namespace AuctionService.Controllers
 
             if (!result) return BadRequest("Could not save changes to the DB");
 
-            //return _mapper.Map<AuctionDto>(auction);
             return CreatedAtAction(nameof(GetAuctionById), new { auction.Id}, _mapper.Map<AuctionDto>(auction));
         }
 
